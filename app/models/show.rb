@@ -17,6 +17,7 @@ class Show < ActiveRecord::Base
   def network
     self.save
     self.network_id = self.id
+    binding.pry
     Network.where(id: self.network_id)
   end
 
